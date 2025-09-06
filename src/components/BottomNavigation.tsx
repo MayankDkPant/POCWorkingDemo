@@ -91,37 +91,40 @@ export function BottomNavigation({ activeScreen, onScreenChange }: BottomNavigat
             <SheetHeader className="pb-4">
               <SheetTitle>More Options</SheetTitle>
             </SheetHeader>
-            <ScrollArea className="h-full pr-4">
-              <div className="grid grid-cols-1 gap-3">
-                {moreNavItems.map((item) => {
-                  const IconComponent = item.icon;
-                  const isActive = activeScreen === item.id;
-                  
-                  return (
-                    <Button
-                      key={item.id}
-                      variant="ghost"
-                      onClick={() => handleMoreNavigation(item.id)}
-                      className={`flex items-center gap-3 justify-start h-auto p-4 ${
-                        isActive 
-                          ? "text-blue-600 bg-blue-50" 
-                          : "text-muted-foreground hover:text-foreground"
-                      }`}
-                    >
-                      <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                        isActive ? "bg-blue-600" : "bg-gray-100"
-                      }`}>
-                        <IconComponent className={`h-5 w-5 ${isActive ? "text-white" : "text-gray-600"}`} />
-                      </div>
-                      <div className="text-left">
-                        <div className="font-medium">{item.label}</div>
-                        <div className="text-xs text-muted-foreground">{item.description}</div>
-                      </div>
-                    </Button>
-                  );
-                })}
-              </div>
-            </ScrollArea>
+          <ScrollArea className="h-full pr-4 pb-6 overflow-auto">
+            <div className="grid grid-cols-1 gap-3">
+              {moreNavItems.map((item) => {
+                const IconComponent = item.icon;
+                const isActive = activeScreen === item.id;
+                
+                return (
+                  <Button
+                    key={item.id}
+                    variant="ghost"
+                    onClick={() => handleMoreNavigation(item.id)}
+                    className={`flex items-center gap-3 justify-start h-auto p-4 ${
+                      isActive 
+                        ? "text-blue-600 bg-blue-50" 
+                        : "text-muted-foreground hover:text-foreground"
+                    }`}
+                  >
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
+                      isActive ? "bg-blue-600" : "bg-gray-100"
+                    }`}>
+                      <IconComponent className={`h-5 w-5 ${isActive ? "text-white" : "text-gray-600"}`} />
+                    </div>
+                    <div className="text-left">
+                      <div className="font-medium">{item.label}</div>
+                      <div className="text-xs text-muted-foreground">{item.description}</div>
+                    </div>
+                  </Button>
+                );
+              })}
+              {/* Spacer ensures last item isn't hidden behind bottom edge */}
+              <div className="h-10" />
+            </div>
+          </ScrollArea>
+
           </SheetContent>
         </Sheet>
       </div>
