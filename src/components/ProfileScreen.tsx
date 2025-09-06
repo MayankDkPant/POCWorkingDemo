@@ -24,13 +24,13 @@ import {
 } from "lucide-react";
 
 const userProfile = {
-  name: "Rajesh Kumar",
+  name: "Mayank Pant",
   phone: "+91 98765 43210",
-  email: "rajesh.kumar@email.com",
+  email: "mayank.pant@email.com",
   aadhaar: "****-****-1234",
-  address: "Tower A, Flat 402, Green Valley Society",
-  area: "Rajpur Road, Dehradun",
-  memberSince: "Jan 2022",
+  address: "Vivek Vihar Ballupur",
+  area: "Dehradun",
+  memberSince: "Aug 2025",
   verificationStatus: "Verified"
 };
 
