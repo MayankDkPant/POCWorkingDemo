@@ -21,8 +21,8 @@ export function SignInScreen({ onSignIn }: SignInScreenProps) {
         />
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="absolute bottom-4 left-4 text-white">
-          <h1 className="text-2xl font-bold">Dehradun Resident Platform</h1>
-          <p className="text-sm opacity-90">Connect with your community</p>
+          <h1 className="text-2xl font-bold">Resident Engagement Platform</h1>
+          <p className="text-sm opacity-90">Connecting you to your City</p>
         </div>
       </div>
 
