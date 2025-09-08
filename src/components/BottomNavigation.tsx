@@ -35,7 +35,7 @@ export function BottomNavigation({ activeScreen, onScreenChange }: BottomNavigat
     { id: "surveys", label: "Surveys & Feedback", icon: BarChart3, description: "Participate in polls and surveys" },
     { id: "emergency", label: "Emergency & Helplines", icon: AlertTriangle, description: "Access emergency services" },
     { id: "payments", label: "Payments & Services", icon: CreditCard, description: "Pay bills and access services" },
-    { id: "community", label: "Community Forum", icon: Users, description: "Connect with neighbors" },
+    //{ id: "community", label: "Community Forum", icon: Users, description: "Connect with neighbors" },
     { id: "profile", label: "Profile & Settings", icon: User, description: "Manage your account" },
   ];
 
