@@ -1,0 +1,31 @@
+{
+  "name": "Resident Engagement Platform",
+  "short_name": "REP",
+  "description": "Citizen-first complaints, announcements, events & engagement.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#0b79f0",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/maskable-icon.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Report Issue",
+      "short_name": "Report",
+      "description": "Raise a new complaint",
+      "url": "/#report",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "My Complaints",
+      "short_name": "My Issues",
+      "url": "/#my-complaints",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
