@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SignInScreen } from "./components/SignInScreen";
 import { DashboardScreen } from "./components/DashboardScreen";
 import { MyComplaintsScreen } from "./components/MyComplaintsScreen";
+import { NewComplaintScreen } from "./components/NewComplaintScreen";
 import { AllComplaintsScreen } from "./components/AllComplaintsScreen";
 import { AnnouncementsScreen } from "./components/AnnouncementsScreen";
 import { CampaignsEventsScreen } from "./components/CampaignsEventsScreen";
@@ -38,59 +39,25 @@ export default function App() {
       case "dashboard":
         return <DashboardScreen onNavigate={handleNavigate} />;
       case "myComplaints":
-        return (
-          <MyComplaintsScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <MyComplaintsScreen onBack={() => setActiveScreen("dashboard")} onNavigate={handleNavigate} />;
+      case "newComplaint":
+        return <NewComplaintScreen onBack={() => setActiveScreen("myComplaints")} onNavigate={handleNavigate} />;
       case "allComplaints":
-        return (
-          <AllComplaintsScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <AllComplaintsScreen onBack={() => setActiveScreen("dashboard")} />;
       case "announcements":
-        return (
-          <AnnouncementsScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <AnnouncementsScreen onBack={() => setActiveScreen("dashboard")} />;
       case "events":
-        return (
-          <CampaignsEventsScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <CampaignsEventsScreen onBack={() => setActiveScreen("dashboard")} />;
       case "surveys":
-        return (
-          <SurveysScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <SurveysScreen onBack={() => setActiveScreen("dashboard")} />;
       case "emergency":
-        return (
-          <EmergencyScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <EmergencyScreen onBack={() => setActiveScreen("dashboard")} />;
       case "payments":
-        return (
-          <PaymentsScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <PaymentsScreen onBack={() => setActiveScreen("dashboard")} />;
       case "community":
-        return (
-          <CommunityScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <CommunityScreen onBack={() => setActiveScreen("dashboard")} />;
       case "profile":
-        return (
-          <ProfileScreen
-            onBack={() => setActiveScreen("dashboard")}
-          />
-        );
+        return <ProfileScreen onBack={() => setActiveScreen("dashboard")} />;
       default:
         return <DashboardScreen onNavigate={handleNavigate} />;
     }
@@ -99,7 +66,7 @@ export default function App() {
   return (
     <div className="size-full bg-background">
       {renderScreen()}
-      <BottomNavigation
+      <BottomNavigation 
         activeScreen={activeScreen}
         onScreenChange={handleScreenChange}
       />

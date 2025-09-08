@@ -82,10 +82,12 @@ const getPriorityColor = (priority: string) => {
 
 interface MyComplaintsScreenProps {
   onBack: () => void;
+  onNavigate?: (screen: string) => void;
 }
 
 export function MyComplaintsScreen({
   onBack,
+  onNavigate,
 }: MyComplaintsScreenProps) {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -101,6 +103,7 @@ export function MyComplaintsScreen({
           <Button
             size="sm"
             className="bg-blue-600 hover:bg-blue-700"
+            onClick={() => onNavigate?.("newComplaint")}
           >
             <Plus className="h-4 w-4 mr-1" />
             New Complaint
