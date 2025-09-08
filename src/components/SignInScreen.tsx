@@ -3,6 +3,7 @@ import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import bgImage from "../../assets/images/SignIn_BackgroundImage.jpeg"; // adjust relative path
 
 interface SignInScreenProps {
   onSignIn: () => void;
